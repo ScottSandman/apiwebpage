@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>API Practice</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div>
+      <button
+        onclick="myGetRequest('https://api.openbrewerydb.org/breweries?by_city=charleston','breweries')"
+      >
+        GO GET BREWERIES
+      </button>
+      <button onclick="myGetRequest('http://api.icndb.com/jokes/','chuck')">
+        GO GET CHUCK Norris Joke
+      </button>
+      <button onclick="updateDate()">
+        GET NASA PHOTO OF THE DAY
+      </button>
+      <input id="dateInput" />
+      <br />
+    </div>
+    <div class="card">
+      <img id="nasaImage" class="nasaPic" />
+      <div id="nasaText"></div>
+    </div>
+    <div id="responses"></div>
+  </body>
+</html>
